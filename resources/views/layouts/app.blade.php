@@ -88,27 +88,35 @@
 
                     <ul class="dropdown-menu dropdown-menu-end">
 
-                        <li>
-                            <span class="dropdown-item-text text-muted small">
-                                {{ Auth::user()->email }}
-                            </span>
-                        </li>
+    <li>
+        <span class="dropdown-item-text text-muted small">
+            {{ Auth::user()->email }}
+        </span>
+    </li>
 
+    <li><hr class="dropdown-divider"></li>
 
-                        <li><hr class="dropdown-divider"></li>
+    <li>
+        <a class="dropdown-item" href="{{ route('profile.edit') }}">
+            <i class="fa-solid fa-user-gear me-2"></i>
+            Profile Settings
+        </a>
+    </li>
 
-                        <li>
-                            <button type="button"
-                                    class="dropdown-item text-danger"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#logoutModal">
+    <li><hr class="dropdown-divider"></li>
 
-                                <i class="fa-solid fa-right-from-bracket me-2"></i>
-                                Logout
-                            </button>
-                        </li>
+    <li>
+        <button type="button"
+                class="dropdown-item text-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#logoutModal">
 
-                    </ul>
+            <i class="fa-solid fa-right-from-bracket me-2"></i>
+            Logout
+        </button>
+    </li>
+
+</ul>
 
                 </li>
 
